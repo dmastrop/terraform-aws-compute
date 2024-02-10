@@ -3,7 +3,10 @@
 variable "aws_region" {}
 variable "instance_count" {
   #default = 1
-  default = 3
+  #default = 3
+  # 3 will fail as there are only 2 public sunbnets created in the networking module.
+  # decrease this to 2
+  default = 2
 }
 variable "instance_type" {
   default = "t2.micro"
